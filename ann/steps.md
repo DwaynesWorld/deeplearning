@@ -1,0 +1,5 @@
+- Get data
+- Data Pre-Processing
+- Select Features
+- Split Data
+- Use training as input
