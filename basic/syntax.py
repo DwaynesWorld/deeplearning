@@ -48,3 +48,24 @@ print(result.eval())
 
 result = sess.run(result)
 print(result)
+
+# rand_a = np.random.uniform(0, 100, (5, 5))
+# print(rand_a)
+
+# rand_b = np.random.uniform(0, 100, (5, 1))
+# print(rand_b)
+
+
+# a = tf.placeholder(tf.float32)
+# b = tf.placeholder(tf.float32)
+
+# add_op = a + b
+# mul_op = a * b
+
+# with tf.Session() as sess:
+#     result = sess.run(add_op, feed_dict={a: rand_a, b: rand_b})
+#     print(result)
+#     print("\n")
+
+#     result = sess.run(mul_op, feed_dict={a: rand_a, b: rand_b})
+#     print(result)
