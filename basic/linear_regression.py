@@ -64,14 +64,20 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.001)
 train = optimizer.minimize(error)
 
 init = tf.global_variables_initializer()
+saver = tf.train.Saver()
 
 with tf.Session() as sess:
     sess.run(init)
-    training_steps = 100
-    for i in range(training_steps):
+
+    epochs = 100
+    for i in range(epochs):
         sess.run(train)
 
+    # Results
     final_slope, final_intercept = sess.run([m, b])
+
+    # Save
+    saver.save(sess, 'models/my_first_model.ckpt')
 
 x_test = np.linspace(-1, 11, 10)
 y_pred_plot = final_slope*x_test + final_intercept
