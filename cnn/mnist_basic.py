@@ -14,7 +14,7 @@ mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 # print(mnist.test.num_examples)
 
 # Examine images
-# print(mnist.train.images.shape)
+print(mnist.train.images.shape)
 # single_image = mnist.train.images[1].reshape(28, 28)
 # print(single_image)
 # print(single_image.min())
@@ -52,12 +52,14 @@ with tf.Session() as sess:
 
     for step in range(epochs):
         batch_x, batch_y = mnist.train.next_batch(batch_size)
-        sess.run(train, feed_dict={x: batch_x, y_true: batch_y})
+        feed = {x: batch_x, y_true: batch_y}
+        sess.run(train, feed_dict=feed)
 
     # Get accuracy
     prediction = tf.argmax(y, axis=1)
     actual = tf.argmax(y_true, axis=1)
-    correct_prediction = tf.equal(prediction, actual)
-    acc = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
-    result = sess.run(acc, feed_dict={x: mnist.test.images, y_true: mnist.test.labels})
+    is_correct_prediction = tf.equal(prediction, actual)
+    acc = tf.reduce_mean(tf.cast(is_correct_prediction, tf.float32))
+    feed = {x: mnist.test.images, y_true: mnist.test.labels}
+    result = sess.run(acc, feed_dict=feed)
     print(result)
