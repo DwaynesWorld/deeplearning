@@ -2,5 +2,11 @@
   "python.pythonPath": "/anaconda3/envs/tfdeeplearning/bin/python",
   "code-runner.executorMap": {
     "python": "$pythonPath -u $fullFileName"
+  },
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   }
 }
