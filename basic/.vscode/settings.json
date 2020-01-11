@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "/anaconda3/envs/tfdeeplearning/bin/python",
+  "python.pythonPath": "C:\\Users\\KT\\Anaconda3\\envs\\tf_gpu\\python.exe",
   "code-runner.executorMap": {
     "python": "$pythonPath -u $fullFileName",
     "javascript": "node",

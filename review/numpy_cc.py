@@ -9,27 +9,28 @@ print(my_array)
 print(type(my_array))
 
 range = np.arange(0, 10, 2)
-print(range)
+print("Range: {}".format(range))
 
 zeros = np.zeros((2, 5))
-print(zeros)
+print("Zeroes: {}".format(zeros))
 
 ones = np.ones(5)
-print(ones)
+print("Ones: {}".format(ones))
 
 linspace = np.linspace(0, 11, 5)
-print(linspace)
+print("Linearly space: {}".format(linspace))
 
 randint = np.random.randint(5, 5000, (3, 3))
-print(randint)
+print("Random integer: {}".format(randint))
 
 np.random.seed(101)
 arr = np.random.randint(0, 100, 10)
-print(arr)
-print(arr.max())
-print(arr.argmax())
-print(arr.reshape(2, 5))
+print("Array: {}\n".format(arr))
+print("Array max: {}\n".format(arr.max()))
+print("Array argmax: {}\n".format(arr.argmax()))
+print("Array reshape: {}\n".format(arr.reshape(2, 5)))
 
+print("Matrices\n")
 mat = np.arange(0, 100).reshape(10, 10)
 print(mat)
 print(mat[4, 1])

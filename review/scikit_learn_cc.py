@@ -20,9 +20,9 @@ xdata = scaler_model.fit_transform(data)
 
 # Test / Train Split
 data = np.random.randint(0, 101, (50, 4))
-# print(data)
+print("Random Data: {}".format(data))
 df = pd.DataFrame(data=data, columns=['f1', 'f2', 'f3', 'label'])
-# print(df)
+print("Data frame {}".format(df))
 
 X = df[['f1', 'f2', 'f3']]
 y = df[['label']]

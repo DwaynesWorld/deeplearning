@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import tensorflow as tf
 
-from prettyprinter import cpprint
+# from prettyprinter import cpprint
 from utils import read_cifar_datasets, preview_transformed_data, Cifar
 
 # Import CIFAR data
